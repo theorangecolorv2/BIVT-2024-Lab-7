@@ -212,12 +212,16 @@ namespace Lab_7
 
             public (string, double)[] GetGeneralReport(int question)
             {
+                if (question < 1 || question > 3) { return null; } // добавил проверку 
+                  
+
                 var responses = from research in _researches
                                 from resp in research.Responses
                                 where (question == 1 ? resp.Animal : question == 2 ? resp.CharacterTrait : resp.Concept) != null
                                 select resp;
 
                 int count = responses.Count();
+                
                 var answers = from resp in responses
                               let value = question == 1 ? resp.Animal :
                                           question == 2 ? resp.CharacterTrait :

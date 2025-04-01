@@ -52,13 +52,13 @@ namespace Lab_7
         public class SkiMan : Sportsman
         {
             public SkiMan(string name, string surname) : base(name, surname) { }
-            public SkiMan(string name, string surname, int time) : base(name, surname) { Run(time); }
+            public SkiMan(string name, string surname, double time) : base(name, surname) { Run(time); }
         }
 
         public class SkiWoman : Sportsman
         {
             public SkiWoman(string name, string surname) : base(name, surname) { }
-            public SkiWoman(string name, string surname, int time) : base(name, surname) { Run(time);    }
+            public SkiWoman(string name, string surname, double time) : base(name, surname) { Run(time);    }
         }
 
 
@@ -213,6 +213,7 @@ namespace Lab_7
                 {
                     men = null;
                     women = null;
+                    return;
                 }
                 men = _sportsmen.Where(s => s != null && s is SkiMan).ToArray();
                 women = _sportsmen.Where(s => s != null && s is SkiWoman).ToArray();
