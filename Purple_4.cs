@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -111,22 +111,22 @@ namespace Lab_7
                 _sportsmen[_sportsmen.Length - 1] = sportsman;
             }
 
-            public void Remove(int index)
-            {
-                if (index < 0 || index >= _sportsmen.Length) return;
-                Sportsman[] newSportsmen = new Sportsman[_sportsmen.Length - 1];
-                for (int i = 0; i < index; i++)
-                {
-                    newSportsmen[i] = _sportsmen[i];
-                }
-                for (int i = index; i < _sportsmen.Length - 1; i++)
-                {
-                    newSportsmen[i] = _sportsmen[i+1];
-                }
+            //public void Remove(int index)
+            //{
+            //    if (index < 0 || index >= _sportsmen.Length) return;
+            //    Sportsman[] newSportsmen = new Sportsman[_sportsmen.Length - 1];
+            //    for (int i = 0; i < index; i++)
+            //    {
+            //        newSportsmen[i] = _sportsmen[i];
+            //    }
+            //    for (int i = index; i < _sportsmen.Length - 1; i++)
+            //    {
+            //        newSportsmen[i] = _sportsmen[i+1];
+            //    }
 
-                _sportsmen = newSportsmen;
+            //    _sportsmen = newSportsmen;
 
-            }
+            //}
 
 
             public void Add(Sportsman[] sportsmen)
